@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Dark theme inherits from DayNight base, dark mode variants automatically applied -->
+    <style name="Theme.SmartTaskReminder" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/primary_500</item>
+        <item name="colorPrimaryVariant">@color/primary_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/accent_500</item>
+        <item name="colorSecondaryVariant">@color/accent_500</item>
+        <item name="android:statusBarColor">@color/primary_700</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:colorBackground">@color/bg_primary</item>
+        <item name="colorSurface">@color/bg_primary</item>
+    </style>
+</resources>

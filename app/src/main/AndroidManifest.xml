@@ -2,26 +2,88 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!-- Permissions -->
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.USE_EXACT_ALARM" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/ic_launcher_foreground"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/ic_launcher_foreground"
         android:supportsRtl="true"
-        android:theme="@style/Theme.SmartTaskReminderApplication">
+        android:theme="@style/Theme.SmartTaskReminder">
+
+        <!-- Splash Screen - Launcher -->
         <activity
-            android:name=".MainActivity"
+            android:name=".activities.SplashActivity"
             android:exported="true"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.SmartTaskReminderApplication">
+            android:theme="@style/Theme.SmartTaskReminder.Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- Authentication -->
+        <activity
+            android:name=".activities.LoginActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SmartTaskReminder" />
+
+        <activity
+            android:name=".activities.RegisterActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SmartTaskReminder" />
+
+        <!-- Main Screens -->
+        <activity
+            android:name=".activities.HomeActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SmartTaskReminder" />
+
+        <activity
+            android:name=".activities.AddTaskActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SmartTaskReminder"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".activities.TaskListActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SmartTaskReminder" />
+
+        <activity
+            android:name=".activities.StatisticsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SmartTaskReminder" />
+
+        <activity
+            android:name=".activities.SettingsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SmartTaskReminder" />
+
+        <!-- Broadcast Receivers -->
+        <receiver
+            android:name=".receivers.AlarmReceiver"
+            android:exported="false" />
+
+        <receiver
+            android:name=".receivers.BootReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+                <action android:name="com.htc.intent.action.QUICKBOOT_POWERON" />
+            </intent-filter>
+        </receiver>
+
     </application>
 
 </manifest>

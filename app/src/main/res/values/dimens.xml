@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Common spacing (8dp grid) -->
+    <dimen name="spacing_xs">4dp</dimen>
+    <dimen name="spacing_s">8dp</dimen>
+    <dimen name="spacing_m">16dp</dimen>
+    <dimen name="spacing_l">24dp</dimen>
+    <dimen name="spacing_xl">32dp</dimen>
+
+    <!-- Corner radii -->
+    <dimen name="corner_s">4dp</dimen>
+    <dimen name="corner_m">8dp</dimen>
+    <dimen name="corner_l">16dp</dimen>
+    <dimen name="corner_xl">24dp</dimen>
+
+    <!-- Icon sizes -->
+    <dimen name="icon_s">16dp</dimen>
+    <dimen name="icon_m">24dp</dimen>
+    <dimen name="icon_l">40dp</dimen>
+    <dimen name="icon_xl">120dp</dimen>
+
+    <!-- Elevations -->
+    <dimen name="elevation_card">2dp</dimen>
+    <dimen name="elevation_card_raised">4dp</dimen>
+    <dimen name="elevation_fab">6dp</dimen>
+
+    <!-- Text sizes -->
+    <dimen name="text_h1">28sp</dimen>
+    <dimen name="text_h2">20sp</dimen>
+    <dimen name="text_body">16sp</dimen>
+    <dimen name="text_caption">12sp</dimen>
+    <dimen name="text_large">24sp</dimen>
+
+    <!-- Button sizes -->
+    <dimen name="button_height">48dp</dimen>
+    <dimen name="button_min_width">64dp</dimen>
+
+    <!-- Padding -->
+    <dimen name="padding_standard">16dp</dimen>
+    <dimen name="padding_screen">24dp</dimen>
+
+    <!-- Avatar / Icon -->
+    <dimen name="avatar_size">120dp</dimen>
+</resources>

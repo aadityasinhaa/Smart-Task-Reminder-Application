@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Dark background colors -->
+    <color name="bg_primary">#121212</color>
+    <color name="bg_secondary">#1E1E1E</color>
+
+    <!-- Text colors (light on dark) -->
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#B0B0B0</color>
+
+    <!-- Keep primary colors same for consistency -->
+    <color name="primary_500">#1976D2</color>
+    <color name="primary_700">#1565C0</color>
+    <color name="accent_500">#009688</color>
+
+    <!-- Priority colors -->
+    <color name="priority_high">#F44336</color>
+    <color name="priority_medium">#FF9800</color>
+    <color name="priority_low">#4CAF50</color>
+</resources>
