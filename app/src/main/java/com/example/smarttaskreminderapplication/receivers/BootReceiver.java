@@ -7,7 +7,6 @@ import android.content.SharedPreferences;
 import com.example.smarttaskreminderapplication.database.DatabaseHelper;
 import com.example.smarttaskreminderapplication.models.Task;
 import com.example.smarttaskreminderapplication.utils.AlarmHelper;
-import com.example.smarttaskreminderapplication.utils.SessionManager;
 import java.util.List;
 
 /**
@@ -31,8 +30,9 @@ public class BootReceiver extends BroadcastReceiver {
             AlarmHelper alarmHelper = new AlarmHelper(context);
 
             // Get logged-in user's ID from persistent session storage
-            SharedPreferences prefs = context.getSharedPreferences(SessionManager.PREF_NAME, Context.MODE_PRIVATE);
-            int userId = prefs.getInt(SessionManager.KEY_USER_ID, -1);
+            // Using same keys as SessionManager (must be kept in sync)
+            SharedPreferences prefs = context.getSharedPreferences("SmartTaskReminderPrefs", Context.MODE_PRIVATE);
+            int userId = prefs.getInt("userId", -1);
 
             if (userId != -1) {
                 List<Task> tasks = dbHelper.getTasksWithReminders(userId);

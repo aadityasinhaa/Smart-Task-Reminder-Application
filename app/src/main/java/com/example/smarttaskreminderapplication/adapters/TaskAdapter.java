@@ -120,7 +120,7 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.TaskViewHolder
      * ViewHolder holds references to views in item_task.xml.
      * Uses efficient view lookup via findViewById.
      */
-    static class TaskViewHolder extends RecyclerView.ViewHolder {
+    class TaskViewHolder extends RecyclerView.ViewHolder {
         private CardView cardView;
         private TextView tvTitle, tvDescription, tvDate, tvTime, tvPriority;
         private CheckBox checkboxCompleted;
